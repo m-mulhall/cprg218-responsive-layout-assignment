@@ -13,6 +13,20 @@ main{
   display: flex;
 }
 
+#container{
+img{
+  border: 5px solid #d9043d;
+}
+}
+
+h2{
+  color: #120323;
+}
+
 aside{
   display: flex;
+}
+
+footer{
+  background-color: #d9043d;
 }
