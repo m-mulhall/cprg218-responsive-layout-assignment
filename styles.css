@@ -1,0 +1,18 @@
+
+* {
+  box-sizing: border-box;
+}
+
+header{
+  display: flex;
+  background-color: #120323;
+  color: white;
+}
+
+main{
+  display: flex;
+}
+
+aside{
+  display: flex;
+}
