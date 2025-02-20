@@ -3,7 +3,7 @@
   box-sizing: border-box;
 }
 
-header{
+.header-container{
   display: flex;
   background-color: #120323;
   color: white;
@@ -14,13 +14,10 @@ main{
 }
 
 #container{
-img{
-  border: 5px solid #d9043d;
-}
-}
-
-h2{
-  color: #120323;
+  img{
+  border: 5px solid #d9043d; }
+  h2{
+  color: #120323; }
 }
 
 aside{
