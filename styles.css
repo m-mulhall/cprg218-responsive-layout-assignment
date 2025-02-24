@@ -4,26 +4,50 @@
 }
 
 .header-container{
-  display: flex;
+  display: grid;
   background-color: #120323;
   color: white;
 }
 
 main{
-  display: flex;
+  display: grid;
 }
 
 #container{
   img{
+  display: grid;
   border: 5px solid #d9043d; }
   h2{
   color: #120323; }
 }
 
 aside{
-  display: flex;
+  display: grid;
+  background-color: #97bf04;
 }
 
 footer{
+  grid-area: bottom;
   background-color: #d9043d;
+}
+
+@media screen and (max-width: 767px){
+
+  .header-container{
+    place-items: center;
+  }
+
+  div#container{
+    grid-template-areas: 
+    "top"
+    "right"
+    "left"
+    "bottom";
+    grid-template-columns: 1fr;
+    img{
+      width: 100%;
+      height: auto;
+      place-items: center;
+    }
+  }
 }
