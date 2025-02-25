@@ -4,25 +4,26 @@
 }
 
 .header-container{
-  display: grid;
+  grid-area: top;
   background-color: #120323;
   color: white;
 }
 
 main{
-  display: grid;
+  display: flex;
+  grid-area: left;
 }
 
 #container{
+  grid-area: right;
   img{
-  display: grid;
   border: 5px solid #d9043d; }
   h2{
   color: #120323; }
 }
 
 aside{
-  display: grid;
+  grid-area: left;
   background-color: #97bf04;
 }
 
@@ -31,9 +32,38 @@ footer{
   background-color: #d9043d;
 }
 
-@media screen and (max-width: 767px){
+@media screen and (max-width: 1000px){
 
   .header-container{
+    display: flex;
+    gap: 1rem;
+  }
+
+  div#container{
+    display: flex;
+    flex-direction: column;
+    grid-template-areas:
+    "top top"
+   "left right"
+   "bottom bottom";
+   grid-template-columns: 1fr 1fr;
+   grid-template-rows: auto 1fr auto;
+  }
+
+  img{
+    display: flex;
+    float: left;
+    max-width: 300px;
+    height: auto;
+  }
+  
+} 
+
+@media screen and (max-width: 768px){
+
+  .header-container{
+    display: grid;
+    gap: 1rem;
     place-items: center;
   }
 
@@ -44,7 +74,11 @@ footer{
     "left"
     "bottom";
     grid-template-columns: 1fr;
+    gap: 0;
+
     img{
+      display: inline-block;
+      max-width: 768px;
       width: 100%;
       height: auto;
       place-items: center;
